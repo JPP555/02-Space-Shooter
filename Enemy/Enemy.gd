@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 onready var Enemy_Bullet = load("res://Enemy/Enemy_Bullet.tscn")
-var nose = Vector2(0, -60)
+var nose = Vector2(0,-60)
 var health = 5
 
 var score = 50

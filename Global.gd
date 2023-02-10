@@ -9,6 +9,8 @@ func _ready():
 	randomize()
 	VP = get_viewport().size
 	var _signal = get_tree().get_root().connect("size_changed", self, "_resize")
+	update_score(0)
+	update_lives(0)
 	reset()
 
 func reset():

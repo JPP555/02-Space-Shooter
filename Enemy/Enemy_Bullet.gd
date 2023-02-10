@@ -3,11 +3,11 @@ extends Area2D
 var velocity = Vector2(0,-800)
 var damage = 10
 
-onready var Explosion = load("res://Effects/Explosion.tscn")
 var Effects = null
+onready var Explosion = load("res://Effects/Explosion.tscn")
 
-func _physics_process(_delta):
-	position += velocity.rotated(rotation)*_delta
+func _physics_process(delta):
+	position += velocity.rotated(rotation)*delta
 	position.x = wrapf(position.x, 0, Global.VP.x)
 	position.y = wrapf(position.y, 0, Global.VP.y)
 

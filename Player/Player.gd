@@ -19,7 +19,7 @@ var Effects = null
 func _ready():
 	pass
 
-func _physics_process(_delta):
+func _physics_process(delta):
 	velocity += get_input()*speed
 	velocity = velocity.normalized() * clamp(velocity.length(), 0, max_speed)
 	velocity = move_and_slide(velocity, Vector2.ZERO)
