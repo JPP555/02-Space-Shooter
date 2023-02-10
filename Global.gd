@@ -9,7 +9,8 @@ func _ready():
 	randomize()
 	VP = get_viewport().size
 	var _signal = get_tree().get_root().connect("size_changed", self, "_resize")
-	
+	reset()
+
 func reset():
 	score = 0
 	lives = 5
@@ -35,7 +36,6 @@ func update_lives(l):
 	lives += l
 	if lives <= 0:
 		var _scene = get_tree().change_scene("res://UI/End_Game.tscn")
-	
 	var Lives = get_node_or_null("/root/Game/UI/HUD/Lives")
 	if Lives != null:
 		Lives.text = "Lives: " + str(lives)

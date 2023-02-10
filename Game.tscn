@@ -43,6 +43,6 @@ anchor_right = 1.0
 margin_left = -500.0
 margin_right = -5.0
 margin_bottom = 40.0
-text = "Lives:"
+text = "Lives: "
 align = 2
 valign = 1

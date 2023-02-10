@@ -33,7 +33,7 @@ func get_input():
 	if Input.is_action_pressed("up"):
 		$Exhaust.show()
 		dir += Vector2(0,-1)
-	if Input.is_action_just_pressed("left"):
+	if Input.is_action_pressed("left"):
 		rotation_degrees -= rot_speed
 	if Input.is_action_pressed("right"):
 		rotation_degrees += rot_speed
@@ -43,7 +43,7 @@ func get_input():
 
 
 func shoot():
-	Effects = get_node_or_null(".root/Game/Effects")
+	Effects = get_node_or_null("/root/Game/Effects")
 	if Effects != null:
 		var bullet = Bullet.instance()
 		Effects.add_child(bullet)
